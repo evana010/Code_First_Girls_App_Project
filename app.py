@@ -39,7 +39,7 @@ superhero_user = random_superhero()
 user_score = 0
 computer_score = 0
 
-app = Flask("first-app")
+app = Flask(__name__)
 app.secret_key = '1234'
 
 @app.route("/")
@@ -89,4 +89,5 @@ def win():
 def lose():
     return render_template('/you_lose.html')
 
-app.run()
+if __name__ == '__main__':
+    app.run()
