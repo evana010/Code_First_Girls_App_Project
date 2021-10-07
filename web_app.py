@@ -5,8 +5,6 @@ import os
 from flask import Flask, render_template, request, flash
 
 key = os.environ["api_key"]
-print(key)
-
 
 def random_superhero():
     superhero_number = random.randint(1, 731)
