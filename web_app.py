@@ -4,7 +4,7 @@ import urllib3
 import os
 from flask import Flask, render_template, request, flash
 
-key = os.environ["api_key"]
+key = os.environ.get("API_KEY")
 
 def random_superhero():
     superhero_number = random.randint(1, 731)
